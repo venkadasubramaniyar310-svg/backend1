@@ -1,0 +1,3 @@
+Academic Resource Hub - Sample DBMS Study Material
+Generated at: 2026-10-17T14:01:18.284Z
+Contents: SQL, Normalization, Indexing, Transactions.

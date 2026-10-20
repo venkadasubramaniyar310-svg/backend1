@@ -1,0 +1,23 @@
+# Netlify Serverless Configuration for Standalone Backend Repository
+
+[build]
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+  DB_CLIENT = "sqlite"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  included_files = ["database/**", "uploads/**"]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
